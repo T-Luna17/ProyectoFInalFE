@@ -1,0 +1,44 @@
+{
+  "usuarios": [
+    {
+      "id": "dfbc",
+      "nombre": "Tamara",
+      "apellido": "Santamaria",
+      "email": "Tamiluna00@gmail.com",
+      "password": "1234",
+      "rol": "UsuarioV"
+    },
+    {
+      "id": "7620",
+      "nombre": "Sandy",
+      "apellido": "Mora",
+      "email": "smora.15.@gmail.com",
+      "password": "1234",
+      "rol": "Organización"
+    }
+  ],
+  "eventos": [
+    {
+      "id": "7dcc",
+      "evento": "Recolector de basura",
+      "fecha": "2025-09-28 14:18",
+      "lugar": "San Gabriel",
+      "descripcion": "Botar basura",
+      "estado": "activo",
+      "nombreOrganizacion": "Sandy",
+      "idOrganizacion": "7620"
+    }
+  ],
+  "inscritos": [
+    {
+      "eventoId": 1,
+      "usuarioId": 1,
+      "id": "d606"
+    },
+    {
+      "eventoId": 1,
+      "usuarioId": 2,
+      "id": "212b"
+    }
+  ]
+}

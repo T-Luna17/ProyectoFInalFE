@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.header {
+  background: #a64ac9;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  margin-top: 20px;
+}
+
+.izquierda {
+  flex: 2;
+  padding: 15px;
+  background: #0d1b2a;
+  color: white;
+}
+
+.derecha {
+  flex: 1;
+  padding: 15px;
+  background: #e6ccff;
+  margin-left: 15px;
+  border-radius: 8px;
+}
+
+.perfil {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: auto;
+}
+
+h3 {
+  margin-top: 15px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.voluntarios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.voluntarios th, .voluntarios td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: center;
+}

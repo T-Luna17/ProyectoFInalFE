@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../src/img/ChatGPT Image 18 sept 2025, 10_39_02 a.m..png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(to right, #480c8300, #2e2b2b00);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+  max-width: 100%;
+  backdrop-filter: blur(8px); /* efecto difuminado detrás del navbar */
+  position: relative;
+  right: 30px;
+}
+
+/* Logo */
+.logo {
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #ff66cc;
+}
+
+.navbar .links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .cerrar {
+  background: red;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenido {
+  display: flex;
+  padding: 5px;
+  gap: 20px; /* espacio entre eventos y formulario */
+}
+
+/* LISTA DE EVENTOS */
+.eventos {
+  flex: 7; /* 70% */
+  background: #0f2641;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.eventos h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.eventos table {
+  width: 100%; /* tabla ocupa todo el contenedor */
+  border-collapse: collapse;
+}
+
+.eventos td {
+  border: 1px solid #c8abe6;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estado de evento */
+.estado {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.estado.activo {
+  background: green;
+}
+
+.estado.desactivado {
+  background: gray;
+}
+
+/* FORMULARIO */
+.formulario {
+  flex: 3; /* 30% */
+  padding: 30px;
+  border-radius: 15px;
+  background: #b748b756;
+}
+
+.formulario h2 {
+  text-align: center;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.guardar {
+  margin-top: 15px;
+  background: green;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* BOTONES DE ACCIÓN */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;       /* si no caben, bajan */
+  justify-content: center;
+  gap: 10px;             /* espacio uniforme entre botones */
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.editar {
+  background: #cc33cc;
+  color: white;
+}
+
+.eliminar {
+  background: #cc0000;
+  color: white;
+}
+
+.inscripcion {
+  background: #00ccff;
+  color: white;
+}
+
+.activar {
+  background: green;
+  color: white;
+}
+
+.desactivar {
+  background: gray;
+  color: white;
+}
+
+/* ERRORES */
+.error {
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 4px;
+}

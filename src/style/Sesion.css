@@ -1,0 +1,104 @@
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sesion-page {
+  min-height: 100vh;
+  background: url("../src/img/ChatGPT Image 18 sept 2025, 10_39_02 a.m..png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  padding: 5px 20px;
+  background: rgba(200, 0, 150, 0); /* igual que formulario */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0;
+  margin-top: -40px;
+}
+
+/* Logo */
+.logo {
+  height: 70px;
+  border-radius: 8px;
+}
+
+/* Links */
+.nav-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 15px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover {
+  background: #b84cb8;
+}
+
+/* --- FORMULARIOS --- */
+.form-container {
+  background: rgba(200, 0, 150, 0.384);
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: pink;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #00000055;
+}
+
+/* Inputs */
+.form-container input {
+  padding: 8px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  background: #d26cd2;
+  color: white;
+}
+
+.form-container input::placeholder {
+  color: #eee;
+}
+
+/* Botón */
+.form-container button {
+  background: #d26cd2;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-container button:hover {
+  background: #b84cb8;
+}
+
+
