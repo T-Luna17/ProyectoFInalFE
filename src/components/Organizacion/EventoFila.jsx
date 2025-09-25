@@ -4,8 +4,10 @@ function EventoFila({ evento, onEliminar, onEditar, onToggleEstado, onInscribir 
   return (
     <tr>
       <td>
-        <strong>{evento.evento}</strong><br />
-        {evento.fecha} - {evento.lugar}<br />
+        <strong>{evento.Titulo}</strong>
+        <br />
+        {evento.fecha} - {evento.lugar}
+        <br />
         {evento.descripcion}
       </td>
       <td>
@@ -14,9 +16,15 @@ function EventoFila({ evento, onEliminar, onEditar, onToggleEstado, onInscribir 
         </span>
       </td>
       <td>
-        <button className="editar" onClick={onEditar}>Editar</button>
-        <button className="eliminar" onClick={onEliminar}>Eliminar</button>
-        <button className="inscripcion" onClick={onInscribir}>Inscribirse</button>
+        <button className="editar" onClick={onEditar}>
+          Editar
+        </button>
+        <button className="eliminar" onClick={onEliminar}>
+          Eliminar
+        </button>
+        <button className="inscripcion" onClick={onInscribir}>
+          Inscribirse
+        </button>
         <button className="activar" onClick={onToggleEstado}>
           {activo ? "Desactivar" : "Activar"}
         </button>
@@ -26,4 +34,5 @@ function EventoFila({ evento, onEliminar, onEditar, onToggleEstado, onInscribir 
 }
 
 export default EventoFila;
+
 

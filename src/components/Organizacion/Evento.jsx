@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { getEventos, deleteEvento, toggleEstado, inscribirEnEvento,editEvento} from "../../services/servicesEventos";
+import { getEventos, deleteEvento, toggleEstado, inscribirEnEvento, editEvento } from "../../services/servicesEventos";
 import EventoFila from "./EventoFila";
 
 function Eventos() {
   const [eventos, setEventos] = useState([]);
+  const [eventoEditando, setEventoEditando] = useState(null); // Evento que se va a editar
+  const [formData, setFormData] = useState({ Titulo: "", fecha: "", lugar: "", descripcion: "" }); // datos del form
+  const [mostrarModal, setMostrarModal] = useState(false);
 
   useEffect(() => {
     cargarEventos();
@@ -19,16 +22,24 @@ function Eventos() {
     cargarEventos();
   }
 
-  async function onEditar(id) {
+  // Cuando se hace clic en "Editar"
+  function abrirModalEditar(evento) {
+    setEventoEditando(evento);
+    setFormData({
+      Titulo: evento.Titulo,
+      fecha: evento.fecha,
+      lugar: evento.lugar,
+      descripcion: evento.descripcion,
+    });
+    setMostrarModal(true);
+  }
 
-
-
-    const evento = await editEvento(id);
-    console.log(evento);
-
-
-
-    
+  // Guardar cambios del modal
+  async function guardarEdicion(e) {
+    e.preventDefault();
+    await editEvento(eventoEditando.id, formData); // 👈 aquí mandamos los datos editados
+    setMostrarModal(false);
+    setEventoEditando(null);
     cargarEventos();
   }
 
@@ -66,17 +77,66 @@ function Eventos() {
               key={ev.id}
               evento={ev}
               onEliminar={() => eliminar(ev.id)}
-              onEditar={() => cargarModal(ev.id)}
+              onEditar={() => abrirModalEditar(ev)} // ✅ ahora sí abrimos el modal
               onToggleEstado={() => cambiarEstado(ev.id, ev.estado)}
               onInscribir={() => inscribir(ev.id)}
             />
           ))}
         </tbody>
       </table>
+
+      {/* Modal de edición */}
+      {mostrarModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <h3>Editar Evento</h3>
+            <form onSubmit={guardarEdicion}>
+              <label>
+                Título:
+                <input
+                  type="text"
+                  value={formData.Titulo}
+                  onChange={(e) => setFormData({ ...formData, Titulo: e.target.value })}
+                />
+              </label>
+              <label>
+                Fecha:
+                <input
+                  type="date"
+                  value={formData.fecha}
+                  onChange={(e) => setFormData({ ...formData, fecha: e.target.value })}
+                />
+              </label>
+              <label>
+                Lugar:
+                <input
+                  type="text"
+                  value={formData.lugar}
+                  onChange={(e) => setFormData({ ...formData, lugar: e.target.value })}
+                />
+              </label>
+              <label>
+                Descripción:
+                <textarea
+                  value={formData.descripcion}
+                  onChange={(e) => setFormData({ ...formData, descripcion: e.target.value })}
+                />
+              </label>
+
+              <button type="submit">Guardar cambios</button>
+              <button type="button" onClick={() => setMostrarModal(false)}>
+                Cancelar
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
 
 export default Eventos;
+
+
 
 
