@@ -1,0 +1,118 @@
+/* ==== NAVBAR ==== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #3f0071, #000);
+  padding: 10px 10px;
+  color: white;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.titulo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-cerrar {
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ==== CONTENIDO ==== */
+.contenedor-actividades {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Columnas */
+.columna {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+.izquierda {
+  background-color: #1a1a5c;
+}
+
+.derecha {
+  background-color: #222;
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* Estados */
+.estado {
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.estado.activo {
+  background-color: green;
+  color: white;
+}
+
+.estado.desactivado {
+  background-color: gray;
+  color: white;
+}
+
+/* Botón */
+.btn-inscribirse {
+  margin-left: 10px;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 15px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-inscribirse:hover {
+  background-color: #0097a7;
+}

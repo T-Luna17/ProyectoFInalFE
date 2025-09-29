@@ -12,7 +12,10 @@ function Organizacion() {
   useEffect(() => {
     async function cargar() {
       const data = await getEventos();
-      setEventos(data);
+      const filtroEventos = data.filter((e)=>e.idOrganizacion == localStorage.getItem("usuario").id)
+      console.log(data);
+      console.log(filtroEventos);
+      setEventos(filtroEventos);
     }
     cargar();
   }, []);

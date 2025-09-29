@@ -5,6 +5,7 @@ import Sesion from "../pages/Sesion"
 import SobreNosotros from "../pages/SobreNosotros"
 import PerfilPage from "../pages/PerfilPage"
 import Organizacion from "../pages/Organizacion"
+import Voluntario from "../pages/Voluntario"
 
 
 function Routing() {
@@ -17,6 +18,7 @@ function Routing() {
         <Route path="/nosotros" element={<SobreNosotros/>} />
         <Route path="/perfil" element={<PerfilPage/>} />
         <Route path="/organizacion" element={<Organizacion/>} />
+        <Route path="/Voluntario" element={<Voluntario/>} />
       </Routes>
     </Router>
   )

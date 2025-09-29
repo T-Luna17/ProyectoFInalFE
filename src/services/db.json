@@ -6,7 +6,11 @@
       "apellido": "Santamaria",
       "email": "Tamiluna00@gmail.com",
       "password": "1234",
-      "rol": "UsuarioV"
+      "rol": "UsuarioV",
+      "edad": "",
+      "disponibilidad": "",
+      "experiencia": "",
+      "habilidades": ""
     },
     {
       "id": "7620",
@@ -14,7 +18,11 @@
       "apellido": "Mora",
       "email": "smora.15.@gmail.com",
       "password": "1234",
-      "rol": "Organización"
+      "rol": "Organización",
+      "edad": "",
+      "disponibilidad": "",
+      "experiencia": "",
+      "habilidades": ""
     }
   ],
   "eventos": [
@@ -28,19 +36,17 @@
       "nombreOrganizacion": "Sandy",
       "idOrganizacion": "7620",
       "titulo": "Reciclaje",
-      "Titulo": "Recoger basura"
+      "Titulo": "Recoger basurita"
     }
   ],
   "inscritos": [
     {
-      "eventoId": 1,
-      "usuarioId": 1,
-      "id": "d606"
-    },
-    {
-      "eventoId": 1,
-      "usuarioId": 2,
-      "id": "212b"
+      "id": "a422",
+      "idEvento": "7dcc",
+      "nombreOrganizacion": "Sandy",
+      "idUsuario": "7620",
+      "nombreUsuario": "Sandy",
+      "fechaInscripcion": "2025-09-29"
     }
   ]
 }

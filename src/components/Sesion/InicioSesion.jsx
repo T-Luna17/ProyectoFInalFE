@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { obtenerUsuarios } from "../../services/services";
+import {obtenerUsuarios} from "../../services/services";
 
 function IniciarSesion() {
   const [identificador, setIdentificador] = useState(""); // ID o correo
@@ -26,6 +26,7 @@ function IniciarSesion() {
     if (usuarioEncontrado) {
         localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
         alert("✅ Sesión exitosa usuario");
+        navigate("/Voluntario")
         return
     }
   }

@@ -13,8 +13,9 @@ function Eventos() {
   }, []);
 
   async function cargarEventos() {
-    const data = await getEventos();
-    setEventos(data);
+    const data = await fetch(`http://localhost:3001/eventos?idOrganizacion=${JSON.parse(localStorage.getItem("usuario")).id}`)
+    const respuesta = await data.json()
+    setEventos(respuesta)
   }
 
   async function eliminar(id) {

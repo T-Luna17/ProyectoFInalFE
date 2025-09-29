@@ -27,7 +27,6 @@ function NavBarLP() {
 
         <div className={`perfil-menu ${openMenu ? "open" : ""}`}>
           <Link to="/perfil">👤 Mi Perfil</Link>
-          <Link to="/configuracion">⚙️ Configuración</Link>
           <button onClick={() => alert("Cerrando sesión...")}>
             🚪 Cerrar sesión
           </button>
