@@ -1,18 +1,23 @@
 import { useEffect,useState } from "react";
-import { getinscritos } from "../../services/servicesEventos";
+import { getEventos, } from "../../services/servicesEventos";
 
 function Voluntarios() {
   const [voluntariados,setVoluntariados] = useState([]);
 
   useEffect(()=>{
     async function traerVoluntariados() {
-      const peticion = await getinscritos()
-      setVoluntariados(peticion)
+      const peticion = await getEventos()
+      const misInscritos = peticion.filter((i)=>i.idOrganizacion==JSON.parse(localStorage.getItem("usuario")).id)
+      console.log(misInscritos)
+      setVoluntariados(misInscritos)
     }
     traerVoluntariados()
   },[])
   return (
+    <>
+      {JSON.parse(localStorage.getItem("usuario")).rol=="Organización" &&(
     <section className="voluntarios">
+        <>
       <h3>Voluntarios Inscritos</h3>
       <table>
         <thead>
@@ -32,10 +37,12 @@ function Voluntarios() {
               </tr>
             )
           })}
-         
         </tbody>
       </table>
+      </>
     </section>
+         )}
+    </>
   );
 }
 

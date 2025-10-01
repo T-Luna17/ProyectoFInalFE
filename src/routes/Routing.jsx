@@ -6,21 +6,31 @@ import PerfilPage from "../pages/PerfilPage"
 import Organizacion from "../pages/Organizacion"
 import Voluntario from "../pages/Voluntario"
 import AdminPage from "../pages/AdmiPage"
-
-
+import PrivateRoute from "./PrivateRoute"
 function Routing() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LadingPage/>} />
-        <Route path="/Sesion" element={<Sesion/>} />
-        <Route path="/nosotros" element={<SobreNosotros/>} />
-        <Route path="/perfil" element={<PerfilPage/>} />
-        <Route path="/organizacion" element={<Organizacion/>} />
-        <Route path="/Voluntario" element={<Voluntario/>} />
-        <Route path="/Admi" element={<AdminPage/>} />
+        {/* Rutas públicas */}
+        <Route path="/" element={<LadingPage />} />
+        <Route path="/Sesion" element={<Sesion />} />
+        <Route path="/nosotros" element={<SobreNosotros />} />
+
+        {/* Perfil */}
+          <Route path="/perfil" element={<PrivateRoute children={<PerfilPage />} />} />
+
+        {/* Organización */}
+        <Route path="/organizacion" element={<PrivateRoute children={<Organizacion/>} />} />
+
+        {/* Voluntario */}
+          <Route path="/Voluntario" element={<PrivateRoute children={<Voluntario/>} />} />
+
+        {/* Admin */}
+        <Route path="/Admi" element={<PrivateRoute children={<AdminPage />} />} />
       </Routes>
     </Router>
   )
 }
-export default Routing
+
+export default Routing;
+

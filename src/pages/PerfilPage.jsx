@@ -38,9 +38,11 @@ function PerfilPage({ userId }) {
           <Experiencia experiencia={usuario.experiencia} usuario={usuario} setUsuario={setUsuario} />
           <Habilidades habilidades={usuario.habilidades} usuario={usuario} setUsuario={setUsuario} />
         </div>
+        {JSON.parse(localStorage.getItem("usuario")).rol === "Organización" && (
         <div className="derecha">
           <Voluntarios />
         </div>
+        )}
       </div>
       <FooterLP />
     </div>

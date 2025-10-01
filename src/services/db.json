@@ -62,6 +62,16 @@
       "idOrganizacion": "7620",
       "titulo": "Reciclaje",
       "Titulo": "Recoger basurita"
+    },
+    {
+      "id": "be61",
+      "evento": "Prueba",
+      "fecha": "2025-10-01 15:33",
+      "lugar": "Paaa",
+      "descripcion": "aaaa",
+      "estado": "activo",
+      "nombreOrganizacion": "Fundación ",
+      "idOrganizacion": "b79c"
     }
   ],
   "inscritos": [
