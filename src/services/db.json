@@ -2,15 +2,23 @@
   "usuarios": [
     {
       "id": "dfbc",
-      "nombre": "Tamara",
-      "apellido": "Santamaria",
-      "email": "Tamiluna00@gmail.com",
+      "nombre": "Heidi",
+      "apellido": "Luna",
+      "email": "Heidi.Luna@gmail.com",
       "password": "1234",
       "rol": "UsuarioV",
-      "edad": "",
-      "disponibilidad": "",
-      "experiencia": "",
-      "habilidades": ""
+      "edad": "26",
+      "disponibilidad": "3 veces por semana",
+      "experiencia": "Voluntariado en la U",
+      "habilidades": "Aprendo rápido,Facilidad de palabra,Liderazgo"
+    },
+    {
+      "id": "1720",
+      "nombre": "Tamara",
+      "apellido": "Luna",
+      "email": "Tamiluna00@gmail.com",
+      "password": "1234",
+      "rol": "Administrador"
     },
     {
       "id": "7620",
@@ -23,6 +31,23 @@
       "disponibilidad": "",
       "experiencia": "",
       "habilidades": ""
+    },
+    {
+      "id": "b79c",
+      "nombre": "Fundación ",
+      "apellido": "Alleanza",
+      "email": "f.alleanza.18@gmail.com",
+      "password": "1100",
+      "rol": "Organización"
+    },
+    {
+      "id": "ffcd",
+      "nombre": "Mariana",
+      "apellido": "Solis",
+      "email": "Mari.s.17@gmail.com",
+      "password": "1717",
+      "rol": "UsuarioV",
+      "foto": "https://i.pinimg.com/564x/55/c0/b0/55c0b09531f9598d26f282227711aeba.jpg"
     }
   ],
   "eventos": [
@@ -44,9 +69,35 @@
       "id": "a422",
       "idEvento": "7dcc",
       "nombreOrganizacion": "Sandy",
-      "idUsuario": "7620",
+      "idUsuario": "dfbc",
+      "lugar": "San Juanita",
+      "fecha": "2025-09-24",
       "nombreUsuario": "Sandy",
+      "estado": "desactivado",
       "fechaInscripcion": "2025-09-29"
+    },
+    {
+      "id": "12ac",
+      "idEvento": "7dcc",
+      "nombreOrganizacion": "Sandy",
+      "idUsuario": "dfbc",
+      "nombreUsuario": "Heidi",
+      "fechaInscripcion": "2025-09-30",
+      "fecha": "2025-09-24",
+      "lugar": "San Juanita",
+      "estado": "desactivado"
+    },
+    {
+      "id": "2d5d",
+      "idEvento": "7dcc",
+      "nombreOrganizacion": "Sandy",
+      "idUsuario": "dfbc",
+      "nombreUsuario": "Heidi",
+      "fechaInscripcion": "2025-10-01",
+      "fecha": "2025-09-24",
+      "lugar": "San Juanita",
+      "estado": "activo",
+      "nombreEvento": "Reciclaje"
     }
   ]
 }

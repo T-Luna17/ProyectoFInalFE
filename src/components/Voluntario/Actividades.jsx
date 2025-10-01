@@ -12,8 +12,10 @@ function Actividades() {
     async function fetchData() {
       let ev = await getEventos();
       let ins = await getinscritos();
+      const siActivos = ins.filter((ins)=>ins.estado === "activo")
       setEventos(ev);
-      setInscritos(ins);
+      console.log(ev);
+      setInscritos(siActivos);
     }
     fetchData();
   }, []);
@@ -24,15 +26,20 @@ function Actividades() {
         nombreOrganizacion: evento.nombreOrganizacion,
         idUsuario: JSON.parse(localStorage.getItem("usuario")).id,
         nombreUsuario: JSON.parse(localStorage.getItem("usuario")).nombre,
-        fechaInscripcion: new Date().toISOString().split("T")[0]
+        fechaInscripcion: new Date().toISOString().split("T")[0],
+        fecha: evento.fecha,
+        lugar:evento.lugar,
+        estado:evento.estado,
+        nombreEvento:evento.titulo
     }
+    console.log(objEvento);
     await inscribirEnEvento(objEvento);
   }
 
   return (
     <div className="contenedor-actividades">
       <ListaInscritos inscritos={inscritos} />
-      <ListaEventos eventos={eventos} onInscribirse={inscribirse} />
+      <ListaEventos eventos={eventos} inscribirse={()=>inscribirse(eventos[0])}/>
     </div>
   );
 }

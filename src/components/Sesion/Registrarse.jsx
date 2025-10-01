@@ -26,7 +26,7 @@ function Registrarse() {
       setMensaje("✅ Registro exitoso");
 
       setTimeout(() => {
-        navigate("/"); // ir a login
+        navigate("/Sesion"); // ir a login
       }, 1000);
     } catch {
       setMensaje("❌ Error al registrar");

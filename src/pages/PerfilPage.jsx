@@ -15,14 +15,14 @@ function PerfilPage({ userId }) {
   useEffect(() => {
     async function fetchUsuario() {
       try {
-        const data = await getUsuarioById(userId);
+        const data = await getUsuarioById(JSON.parse(localStorage.getItem("usuario")).id);
         setUsuario(data);
       } catch (error) {
         console.error("Error cargando usuario:", error);
       }
     }
     fetchUsuario();
-  }, [userId]);
+  }, [userId,usuario]);
 
   if (!usuario) return <p>Cargando perfil...</p>;
 

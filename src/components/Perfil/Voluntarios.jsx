@@ -1,4 +1,16 @@
+import { useEffect,useState } from "react";
+import { getinscritos } from "../../services/servicesEventos";
+
 function Voluntarios() {
+  const [voluntariados,setVoluntariados] = useState([]);
+
+  useEffect(()=>{
+    async function traerVoluntariados() {
+      const peticion = await getinscritos()
+      setVoluntariados(peticion)
+    }
+    traerVoluntariados()
+  },[])
   return (
     <section className="voluntarios">
       <h3>Voluntarios Inscritos</h3>
@@ -11,11 +23,16 @@ function Voluntarios() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
+          {voluntariados.map((v)=>{
+            return(
+              <tr key={v.id}>
+                <td>{v.fecha}</td>
+                <td>{v.lugar}</td>
+                <td>{v.estado}</td>
+              </tr>
+            )
+          })}
+         
         </tbody>
       </table>
     </section>

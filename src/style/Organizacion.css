@@ -9,7 +9,7 @@ body {
 }
 
 /* NAVBAR */
-.navbar {
+.navbarO {
   background: linear-gradient(to right, #480c8300, #2e2b2b00);
   color: white;
   display: flex;
@@ -30,18 +30,20 @@ body {
   padding: 6px;
 }
 
-.navbar .logo {
+.navbarO .logo {
   font-weight: bold;
   color: #ff66cc;
+  position: relative;
+  right: 40px;
 }
 
-.navbar .links a {
+.navbarO .links a {
   margin: 0 10px;
   color: white;
   text-decoration: none;
 }
 
-.navbar .cerrar {
+.navbarO .cerrar {
   background: red;
   border: none;
   padding: 6px 12px;

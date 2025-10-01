@@ -29,6 +29,13 @@ function IniciarSesion() {
         navigate("/Voluntario")
         return
     }
+    const usuarioEncontradoAdmin = usuariosRegistrados.find(u => u.email === identificador && u.password === password && u.rol === "Administrador")
+    if (usuarioEncontradoAdmin) {
+        localStorage.setItem("usuario", JSON.stringify(usuarioEncontradoAdmin));
+        alert("✅ Sesión exitosa administrador");
+        navigate("/Admi")
+        return
+    }
   }
 
   return (

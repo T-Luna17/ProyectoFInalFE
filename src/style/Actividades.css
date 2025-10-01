@@ -1,14 +1,14 @@
 /* ==== NAVBAR ==== */
-.navbar {
+.navbarV {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #3f0071, #000);
+  background: linear-gradient(to right, #6a3b90a7);
   padding: 10px 10px;
   color: white;
 }
 
-.navbar-logo {
+.navbarV-logo {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -27,8 +27,8 @@
 
 .navbar-links {
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: 20px;
 }
 
 .navbar-links a {
@@ -65,7 +65,7 @@
 }
 
 .derecha {
-  background-color: #222;
+  background-color: #4d136c;
 }
 
 /* Títulos */
@@ -88,17 +88,17 @@ li {
 .estado {
   padding: 5px 10px;
   border-radius: 15px;
-  margin-left: 10px;
+  margin-left: 50px;
   font-size: 0.9rem;
 }
 
 .estado.activo {
-  background-color: green;
+  background-color: rgb(184, 8, 8);
   color: white;
 }
 
-.estado.desactivado {
-  background-color: gray;
+.estado.desactivado{
+  background-color: rgb(15, 218, 79);
   color: white;
 }
 

@@ -15,23 +15,27 @@ body {
   padding-top: 30px;
 }
 
-/* --- NAVBAR --- */
-.navbar {
-  width: 100%;
-  max-width: 100%;
-  padding: 5px 20px;
-  background: rgba(200, 0, 150, 0); /* igual que formulario */
+/* --- NAVBAR GENERAL --- */
+.navbarlogin {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0;
-  margin-top: -40px;
+  padding: 5px 450px;
+  background: rgba(107, 44, 113, 0.575); /* semitransparente para que se vea sobre la imagen */
+  position: sticky;
+  top: 0;
+  border-radius: 12px;
+  margin: 0px;
+  backdrop-filter: blur(8px); /* efecto difuminado detrás del navbar */
 }
 
 /* Logo */
 .logo {
   height: 70px;
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px; 
+  position: relative;
 }
 
 /* Links */
@@ -43,6 +47,12 @@ body {
   padding: 6px 12px;
   border-radius: 15px;
   transition: background 0.3s;
+  cursor: pointer;
+  background: #d26cd2;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 400px;
 }
 
 .nav-link:hover {

@@ -9,14 +9,13 @@ function NavBarO() {
     navigate("/Sesion");
   }
   return (
-    <nav className="navbar">
+    <nav className="navbarO">
       <img
         src="../src/img/ChatGPT Image 18 sept 2025, 08_50_44 a.m..png"
         alt="logo"
         className="logo"
       />
       <div className="links">
-        <a href="#">Panel de control</a>
         <Link to={"/perfil"}>Perfil</Link>
 
         <button className="cerrar" onClick={handleLogout}>

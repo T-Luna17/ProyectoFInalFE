@@ -1,0 +1,84 @@
+.navbar-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5f437682;
+  padding: 12px 20px;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  margin-right: 20px;
+  position: relative;
+  left:50px
+}
+
+.btn-logout {
+  background: #ef1901;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #c0392b;
+}
+
+.card {
+  background: #aed8e2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  margin: 6px 0;
+  padding: 8px;
+  background: #0d0d0da2;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.section-admin {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #871c98b6;
+}
+
+.toggle-btn {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+  background: #713d9b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: #633377;
+}
+
+.contenido {
+  padding: 15px;
+}
+
+.card h3, .card h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}

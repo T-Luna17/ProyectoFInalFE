@@ -11,10 +11,36 @@ body {
 }
 
 .header {
-  background: #a64ac9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6f4c86;
+  padding: 10px 20px;
   color: white;
-  padding: 20px;
-  text-align: center;
+}
+
+.logo img {
+  height: 40px; /* 👈 ajusta tamaño del logo */
+  width: auto;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.boton {
+  padding: 8px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background-color: #777;
 }
 
 .contenido {
@@ -29,6 +55,40 @@ body {
   color: white;
 }
 
+.boton {
+  padding: 8px 16px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.boton-editar {
+  background-color: #ffa502;
+}
+
+.boton-editar:hover {
+  background-color: #e67e22;
+}
+
+.boton-edad {
+  background-color: #2ed573;
+}
+
+.boton-edad:hover {
+  background-color: #1eae60;
+}
 .derecha {
   flex: 1;
   padding: 15px;
@@ -66,3 +126,42 @@ h3 {
   padding: 8px;
   text-align: center;
 }
+
+.foto button {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  background: #333;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.foto button:hover {
+  background: #555;
+}
+
+.foto {
+  position: relative;
+  display: inline-block;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #333; /* borde del foto */
+}
+
+/* 🎨 Efecto sobresaliente */
+.foto-perfil:hover {
+  transform: scale(1.1); /* agranda */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra */
+  border: 3px solid #904caf; 
+}
+

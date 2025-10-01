@@ -5,7 +5,7 @@ function NavBarLP() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="navbarLP">
       <img
         src="../src/img/ChatGPT Image 18 sept 2025, 08_50_44 a.m..png"
         alt="logo"
